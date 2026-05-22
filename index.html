@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HBD Meher 🎉</title>
+  <link rel="icon" type="image/x-icon" href="favi.png">
+  <link rel="stylesheet" href="style.css" />
+ 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+ 
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+ 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+ 
+  <!-- CURSOR GLOW -->
+  <div id="cursor-glow"></div>
+  <div id="cursor-dot"></div>
+ 
+  <!-- CANVAS for particles -->
+  <canvas id="particle-canvas"></canvas>
+ 
+  <!-- ===== LOADING SCREEN ===== -->
+  <div id="loading-screen">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <div class="loader-ring loader-ring--2"></div>
+      <div class="loader-ring loader-ring--3"></div>
+      <p class="loader-text" id="loader-text">Something special is coming...</p>
+      <div class="loader-bar-wrap"><div class="loader-bar" id="loader-bar"></div></div>
+    </div>
+  </div>
+ 
+  <!-- ===== MUSIC TOGGLE ===== -->
+  <button id="music-btn" aria-label="Toggle music">
+    <i class="fa-solid fa-music" id="music-icon"></i>
+  </button>
+ 
+  <!-- ===== HERO SECTION ===== -->
+  <section id="hero">
+    <canvas id="confetti-canvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-pre">✨ A Special Day For A Special Person ✨</p>
+      <h1 class="hero-title">
+        <span class="word" id="word1">Happy</span>
+        <span class="word gradient-text" id="word2">Birthday</span>
+        <span class="word" id="word3"><em>Meher</em></span>
+      </h1>
+      <p class="hero-sub">A brother by heart, not just by relation ❤️</p>
+      <a href="#message" class="cta-btn">
+        <span>Explore the Surprise</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </div>
+    <div class="hero-balloons" id="hero-balloons"></div>
+    <div class="scroll-hint"><i class="fa-solid fa-angles-down"></i></div>
+  </section>
+ 
+  <div class="gallery-carousel" data-aos="fade-up" data-aos-delay="100">
+    <div class="carousel-track" id="carousel-track">
+  
+      <!-- Slide 1 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img1.jpg" alt="Memory 1" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 1 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 2 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img2.jpg" alt="Memory 2" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 2 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 3 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img3.jpg" alt="Memory 3" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 3 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 4 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img4.jpg" alt="Memory 4" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 4 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 5 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img5.png" alt="Memory 5" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 5 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 6 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img6.png" alt="Memory 6" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 6 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 7 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img7.png" alt="Memory 7" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 7 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 8 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img8.jpg" alt="Memory 8" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 8 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 9 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img9.jpg" alt="Memory 9" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 9 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 10 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img10.jpg" alt="Memory 10" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 10 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 11 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img11.jpg" alt="Memory 11" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 11 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 12 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img12.jpg" alt="Memory 12" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 12 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 13 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img13.jpg" alt="Memory 13" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 13 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 14 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img14.jpg" alt="Memory 14" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 14 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 15 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img15.jpg" alt="Memory 15" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 15 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 16 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img16.jpg" alt="Memory 16" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 16 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 17 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img17.jpg" alt="Memory 17" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 17 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 18 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img18.jpg" alt="Memory 18" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 18 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 19 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img19.jpg" alt="Memory 19" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 19 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 20 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img20.jpg" alt="Memory 20" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 20 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Continue same pattern up to img36 -->
+  
+      <!-- Slide 36 -->
+      <div class="gallery-slide">
+        <div class="gallery-card">
+          <img src="img36.jpg" alt="Memory 36" />
+          <div class="card-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p>Memory 36 ✨</p>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  
+    <!-- Buttons -->
+    <button class="carousel-btn carousel-btn--prev" id="carousel-prev">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="carousel-btn carousel-btn--next" id="carousel-next">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  
+    <!-- Dots -->
+    <div class="carousel-dots" id="carousel-dots"></div>
+  </div>
+ 
+  <!-- ===== MESSAGE SECTION ===== -->
+  <section id="message">
+    <div class="message-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="message-container" data-aos="zoom-in">
+      <div class="message-card">
+        <div class="message-icon">💌</div>
+        <h2 class="message-title">A Note From The Heart</h2>
+        <div class="message-text" id="typed-message">
+          <!-- Typed by JS -->
+        </div>
+        <div class="message-signature">
+          <span>— With gratitude & warmth 🌷</span>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== FINAL CELEBRATION SECTION ===== -->
+  <section id="celebration">
+    <canvas id="fireworks-canvas"></canvas>
+    <div class="celebration-content" data-aos="zoom-in">
+      <div class="celebration-badge">🎆</div>
+      <h2 class="celebration-title">Here's To You!</h2>
+      <p class="celebration-sub">
+        Wishing you success, happiness, and a <span class="highlight">fantastic year</span> ahead!
+      </p>
+      <div class="wishes-grid">
+        <div class="wish-card" data-aos="flip-left" data-aos-delay="100">
+          <span class="wish-emoji">💪</span>
+          <h4>Strength</h4>
+          <p>May every challenge bend to your will</p>
+        </div>
+        <div class="wish-card" data-aos="flip-left" data-aos-delay="200">
+          <span class="wish-emoji">🌟</span>
+          <h4>Brilliance</h4>
+          <p>May your ideas keep shining bright</p>
+        </div>
+        <div class="wish-card" data-aos="flip-left" data-aos-delay="300">
+          <span class="wish-emoji">❤️</span>
+          <h4>Joy</h4>
+          <p>May laughter fill every single day</p>
+        </div>
+        <div class="wish-card" data-aos="flip-left" data-aos-delay="400">
+          <span class="wish-emoji">🚀</span>
+          <h4>Growth</h4>
+          <p>May your journey reach new heights</p>
+        </div>
+      </div>
+      <p class="final-sign">Happy Birthday, Meher! 🎂</p>
+    </div>
+  </section>
+ 
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- canvas-confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+ 
+  <script src="script.js"></script>
+  <footer class="footer">
+    Designed and developed by Raviraj Patil
+</footer>
+</body>
+
+</html>
